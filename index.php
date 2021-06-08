@@ -33,17 +33,23 @@ get_header();
 		</div>
 	</div>
 
+<!-- TODO : make this dynamic -->
+	<div class="intro" id="intro">
+		<div class="intro-inner">
+			<h2 class="intro-title">introducing coolmat</h2>
+			<p class="intro-text">Street food that was born in tough times. Street food that everybody loves.
+				<span class="yellow"><br>Cool mat</span> is on a mission to provide future 
+				flavor nostalgia of street food for men, 
+				women, children, grandpas and grandmas.
+				we only use the best ingredients.</p>
+		</div>
+	</div>
+
+	<div class="food-title" id="food">Menu</div>
+
+	<div class="food-grid">
 		<?php
 		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -54,17 +60,13 @@ get_header();
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
 				get_template_part( 'template-parts/content', get_post_type() );
-
 			endwhile;
-
 			the_posts_navigation();
-
 		else :
-
 			get_template_part( 'template-parts/content', 'none' );
-
 		endif;
 		?>
+	</div>
 
 	</main><!-- #main -->
 

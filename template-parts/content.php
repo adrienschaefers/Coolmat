@@ -25,6 +25,6 @@
 		<!-- Le prix à droite -->
 	</header><!-- .entry-header -->
 
-	<?php coolmat_post_thumbnail(); ?>
+	<im<?php coolmat_post_thumbnail(); ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

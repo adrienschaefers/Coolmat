@@ -11,6 +11,7 @@ body{
 a{
     text-decoration: none;
     color: #000;
+    display: block;
 }
 
 
@@ -56,7 +57,6 @@ a{
     padding-bottom: 100px;
     padding-left: 30px;
     padding-right: 30px;
-    height: 100vh;
     background-image: url('../assets/intro-bg.svg');
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -73,7 +73,7 @@ a{
 }
 
 .hero-text{
-    font-size: 180px;
+    font-size: 140px;
     line-height: 1;
     color: #ff0066;
     text-align: center;
@@ -91,4 +91,111 @@ a{
 
 .magenta{
     color: #ff0066 ;
+}
+
+.yellow {
+    color: #F8E71C
+}
+
+.intro {
+    background-image: url(../assets/hero-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 108px;
+    padding-bottom: 200px;
+}
+
+.intro-inner{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.20);
+}
+
+.intro-title{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 48px;
+    color: #ffF;
+    border-bottom: 3px solid #FFF;
+    display: inline-block;
+}
+
+.intro-text{
+    font-size: 50px;
+    margin: 0;
+    line-height: 1.1;
+}
+
+
+
+/* POSTS */
+.entry-header{
+background-color:  #ff0066;
+padding: 10px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.entry-title{
+    font-size: 16px;
+    color:#FFF;
+    text-transform: lowercase;
+}
+
+.entry-price{
+    color:#FFF;
+}
+
+.wp-post-image{
+    max-width: 100%;
+    width: auto !important;
+    height: auto !important;
+    display: block;
+}
+
+.post-thumbnail {
+    display: block;
+    /* Disable the link from being clicked */
+    pointer-events: none;
+}
+
+
+/* 
+
+FOOD GRID LAYOUT
+
+1200 px width
+2 x 3 grid
+20px horizontal space
+50px vertical space
+*/
+
+.food-title{
+    font-size:20px;
+    padding-top:50px;
+    padding-bottom:50px;
+    border-bottom: solid 3px #ccc;
+    text-align: center;
+    text-transform: lowercase;
+    margin-bottom: 50px;
+}
+
+.food-grid{
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+
+    /* Ce code défiit le nombre de colonne que l'on veut avoir */
+    grid-template-columns: 1fr 1fr;
+
+    /* L'espcace entre les lignes */
+    grid-row-gap: 50px;
+
+    /* L'espace ente les colonnes */
+    grid-column-gap: 20px;
 }
