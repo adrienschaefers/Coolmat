@@ -1,0 +1,94 @@
+@import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+
+
+body{
+    font-family: 'Hanna', sans-serif; 
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+.site-header{
+    padding: 30px;
+}
+
+
+.header-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+.logo, .language-select{
+    display: block;
+    width: 80px;
+}
+
+
+.language-select{
+    text-align: right;
+}
+
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    
+}
+
+
+.menu-item{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: lowercase;
+}
+
+.hero{
+    padding-top: 40px;
+    padding-bottom: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 100vh;
+    background-image: url('../assets/intro-bg.svg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-inner{
+
+}
+
+.hero-text{
+    font-size: 180px;
+    line-height: 1;
+    color: #ff0066;
+    text-align: center;
+}
+
+.hero-sitename{
+    color : #000;
+}
+
+.hero-description{
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.magenta{
+    color: #ff0066 ;
+}
