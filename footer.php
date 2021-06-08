@@ -11,20 +11,13 @@
 
 ?>
 
+<div class="footer-border"></div>
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'coolmat' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'coolmat' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'coolmat' ), 'coolmat', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
+			<p class="copyright">ⓒ 2018 Coolmat All Rights Reserved</p>
+			<div class="footer-social">
+				<img src="<?php bloginfo('template_url'); ?>/assets/facebook-icon.svg" alt="facebook">
+				<img src="<?php bloginfo('template_url'); ?>/assets/instagram-icon.svg" alt="instagram">
+			</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

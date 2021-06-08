@@ -45,7 +45,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="food-title" id="food">Menu</div>
+	<h2 class="food-title container" id="food">Menu</h2>
 
 	<div class="food-grid">
 		<?php
@@ -68,6 +68,35 @@ get_header();
 		?>
 	</div>
 
+	<h2 class="map-title container">direction to coolmat</h2>
+	
+	<div class="map-container">
+
+		<div class="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9531939287017!2d126.86218631492683!3d37.55616653248025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9c03c38738ad%3A0x1eff909f2c04315c!2s284-10%20Yeomchang-dong%2C%20Gangseo-gu%2C%20Seoul%2C%20Cor%C3%A9e%20du%20Sud!5e0!3m2!1sfr!2sfr!4v1623166259755!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+
+		<div class="map-text">
+			<div class="text">
+				<h3>Business name</h3>
+				<h4><?php bloginfo( "title" )?></h4>
+			</div>
+			<div class="text">
+				<h3>Adress</h3>
+				<h4>284-10 Yeomchang-dong, Gangseo-gu, Seoul</h4>
+			</div>
+			<div class="text">
+				<h3>Phone Number</h3>
+				<h4>02-9999-9999</h4>
+			</div>
+			<div class="text">
+				<h3>Direction</h3>
+				<h4>Get out of gate 3 and walk straight down for about
+				200 meters. You will see Cool Mat on your left.</h4>
+			</div>
+
+		</div>
+	</div>
 	</main><!-- #main -->
 
 <?php
