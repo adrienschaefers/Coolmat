@@ -7,7 +7,12 @@
  * @package coolmat
  */
 
+global $item_number;
+
 ?>
+
+
+
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
@@ -16,6 +21,12 @@
 		<h1 class="entry-title">
 			<?php the_title()?>
 		</h1>
+		
+		<!-- Ici on appelle la variable qui permet d'afficher le chiffre -->
+		<div class="entry-number">
+		<span>
+			<?php echo $item_number?></div>
+		</span>
 
 		<div class="entry-price">
 			<?php the_content(); ?>

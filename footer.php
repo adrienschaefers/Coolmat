@@ -13,7 +13,7 @@
 
 <div class="footer-border"></div>
 	<footer id="colophon" class="site-footer">
-			<p class="copyright">ⓒ 2018 Coolmat All Rights Reserved</p>
+			<p class="copyright">ⓒ <?php echo date("Y") ?> Coolmat All Rights Reserved</p>
 			<div class="footer-social">
 				<img src="<?php bloginfo('template_url'); ?>/assets/facebook-icon.svg" alt="facebook">
 				<img src="<?php bloginfo('template_url'); ?>/assets/instagram-icon.svg" alt="instagram">
