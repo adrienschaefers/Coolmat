@@ -20,18 +20,28 @@ get_header();
 	<!-- On mettre notre section hero ici 
 	todo : make it dynamic ! 
 	-->
+
+	<?php if (have_posts()) : $item_number = 1 ; while (have_posts()) : the_post(); ?>
+
 	<div class="hero">
 		<div class="hero-inner container">
 			<h1 class="hero-text">
 			<!-- Ici on utilise le template tag pour choper le nom du site -->
-				<span class="hero-sitename"><?php bloginfo('name') ?></span> fried seaweed roll
+				<span class="hero-sitename"><?php bloginfo('name') ?></span> <?php the_title(); ?>
 			</h1>
 			<p class="hero-description">
-				<span class="magenta"><?php bloginfo('name') ?></span> is a restaurant that creates future flavor nostalgia
-				of street food.
+				<span class="magenta"><?php bloginfo('description') ?>
 			</p>
 		</div>
 	</div>
+
+	<?php ;
+		endwhile;
+		endif;
+	?>
+
+
+
 
 <!-- TODO : make this dynamic -->
 	<div class="intro" id="intro">
