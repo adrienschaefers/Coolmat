@@ -21,15 +21,19 @@ get_header();
 	todo : make it dynamic ! 
 	-->
 
+	<!-- Ici on ajout un query pour montrer qu'un seul post de catégorie "menu" -->
+	<?php query_posts( 'posts_per_page= 1&category_name=menu&orderby=rand'); ?>
+
 	<?php if (have_posts()) : $item_number = 1 ; while (have_posts()) : the_post(); ?>
 
 	<div class="hero">
 		<div class="hero-inner container">
-			<h1 class="hero-text">
+			<h1 class="hero-text lowercase">
 			<!-- Ici on utilise le template tag pour choper le nom du site -->
-				<span class="hero-sitename"><?php bloginfo('name') ?></span> <?php the_title(); ?>
+				<span class="hero-sitename"><?php bloginfo('name') ?></span> 
+				<?php the_title(); ?>
 			</h1>
-			<p class="hero-description">
+			<p class="hero-description lowercase">
 				<span class="magenta"><?php bloginfo('description') ?>
 			</p>
 		</div>
@@ -59,6 +63,8 @@ get_header();
 
 	<div class="grid">
 		<?php
+// Ici on réecrit un query pour overrider les instructions donner plus haut
+		query_posts( 'posts_per_page=20&category_name=menu' );
 		if ( have_posts() ) :
 			/* Start the Loop */
 			$item_number = 1;

@@ -1,12 +1,11 @@
 @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
-
-
 body{
     font-family: 'Hanna', sans-serif; 
     font-size: 16px;
     line-height: 1.5;
-    color: #000;
+    color: #000; 
 }
+
 
 a{
     text-decoration: none;
@@ -303,6 +302,9 @@ footer{
     font-size: 12px;
 }
 
+.lowercase{
+    text-transform: lowercase;
+}
 
 
 
@@ -324,9 +326,18 @@ footer{
         border-width: 15px;
     }
 
+    .hero{
+        padding-top: 100px;
+        padding-bottom: 160px;
+    }
+
+    .hero-text{
+        font-size: 90px;
+    }
+
 }
 
-@media (max-width : 600px){
+@media (max-width : 680px){
     .site-header{
         padding: 20px;
     }
@@ -335,10 +346,29 @@ footer{
         width: 50px;
     }
 
+    .hero{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .menu-item{
         margin-left: 5px;
         margin-right: 5px;
         font-size: 14px;
+    }
+
+    .menu-item span{
+        display: none;
+    }
+
+    .hero-text{
+        font-size: 64px;
+    }
+
+    .hero-description{
+        font-size: 16px;
     }
 }
 
@@ -349,12 +379,21 @@ footer{
         border-width: 1px;
     }
 
+    .hero{
+        padding-top: 60px;
+        padding-bottom: 120px;
+    }
+
     .logo{
         width: 50px;
     }
 
     .menu{
         padding: 0;
+    }
+
+    .menu-item span{
+        display: none;
     }
 
     .menu-item{
@@ -367,7 +406,7 @@ footer{
         font-size: 14px;
     }
 
-    span{
-        display: none;
+    .intro-text{
+        font-size: 30px;
     }
 }
