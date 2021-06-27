@@ -23,7 +23,6 @@ get_header();
 
 	<!-- Ici on ajout un query pour montrer qu'un seul post de catégorie "menu" -->
 	<?php query_posts( 'posts_per_page= 1&category_name=menu&orderby=rand'); ?>
-
 	<?php if (have_posts()) : $item_number = 1 ; while (have_posts()) : the_post(); ?>
 
 	<div class="hero">
@@ -44,20 +43,25 @@ get_header();
 		endif;
 	?>
 
+	
+	<!-- Ajout d'un query pour la deuxième section -->
+
+	<?php query_posts( 'posts_per_page= 1&category_name=intro'); ?>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+		<!-- TODO : make this dynamic -->
+			<div class="intro" id="intro">
+				<div class="intro-inner">
+					<h2 class="intro-title"><?php the_title(); ?></h2>
+					<div class="intro-text"><?php the_content(); ?></div>
+				</div>
+			</div>
+		<?php ;
+			endwhile;
+			endif;
+		?>
 
 
-
-<!-- TODO : make this dynamic -->
-	<div class="intro" id="intro">
-		<div class="intro-inner">
-			<h2 class="intro-title">introducing coolmat</h2>
-			<p class="intro-text">Street food that was born in tough times. Street food that everybody loves.
-				<span class="yellow"><br>Cool mat</span> is on a mission to provide future 
-				flavor nostalgia of street food for men, 
-				women, children, grandpas and grandmas.
-				we only use the best ingredients.</p>
-		</div>
-	</div>
 
 	<h2 class="food-title container" id="food">Menu</h2>
 
