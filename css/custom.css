@@ -118,7 +118,7 @@ a{
 }
 
 .intro-text{
-    font-size: 50px;
+    font-size: 4vw;
     margin: 0;
     line-height: 1.1;
 }
@@ -335,6 +335,16 @@ footer{
         font-size: 90px;
     }
 
+    .intro{
+        padding-top: 85px;
+        padding-bottom: 105px;
+    }
+
+    .intro-title{
+        font-size : 21px;
+        margin-bottom: 20px;
+    }
+
 }
 
 @media (max-width : 680px){
@@ -406,7 +416,33 @@ footer{
         font-size: 14px;
     }
 
-    .intro-text{
-        font-size: 30px;
+    .intro-title{
+        font-size: 24px;
     }
+
+    .intro-text{
+        font-size: 22px;
+    }
+
+    .intro-text br{
+        display: none;
+    }
+
+
+    .grid{
+        /* max-width: 1220px; */
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+    
+        /* Ce code défiit le nombre de colonne que l'on veut avoir */
+        grid-template-columns: 1fr;
+    
+        /* L'espcace entre les lignes */
+        grid-row-gap: 50px;
+    
+        /* L'espace ente les colonnes */
+        grid-column-gap: 20px;
+    }
+    
 }

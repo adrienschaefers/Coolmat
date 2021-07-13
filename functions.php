@@ -185,3 +185,19 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Register Custom Post Type
+function custom_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Intros', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'intro', 'Post Type Singular Name', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'Post Type', 'text_domain' ),
+		'taxonomies'            => array( 'category', ),	
+		'public'                => true,
+	);
+	register_post_type( 'intro', $args );
+
+}
+add_action( 'init', 'custom_post_type', 0 );
