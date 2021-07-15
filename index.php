@@ -44,9 +44,10 @@ get_header();
 	?>
 
 	
-	<!-- Ajout d'un query pour la deuxième section -->
+	<!-- Here we query for our new intro custom post type and get just
+		one single post -->
 
-	<?php query_posts( 'posts_per_page= 1&category_name=intro'); ?>
+	<?php query_posts( 'posts_per_page= 1&post_type=intro'); ?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<!-- TODO : make this dynamic -->
@@ -94,31 +95,33 @@ get_header();
 	</div>
 
 	<h2 class="map-title container" id="map">direction to coolmat</h2>
-	
+
+
+	<!-- Here we query for our location custom post types -->
+	<?php query_posts( 'post_type=location'); ?>
+	<!-- Then we loop over them  -->
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
 		<div class="location grid">
 			<div class="map">
 				<div class="map-inner">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9531939287017!2d126.86218631492683!3d37.55616653248025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9c03c38738ad%3A0x1eff909f2c04315c!2s284-10%20Yeomchang-dong%2C%20Gangseo-gu%2C%20Seoul%2C%20Cor%C3%A9e%20du%20Sud!5e0!3m2!1sfr!2sfr!4v1623248368789!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-				</div>
+
+				<!-- Firstly we check if the map custom filled in -->
+					<?php if(get_field('map')): ?>
+
+				<!-- If it is, we output  it here -->
+						<?php the_field('map'); ?>
+					<?php endif; ?>
+		
+				</div> 
 			</div>
 
 			<div class="map-text">
-				<div class="text">
-					<h3>Business name</h3>
-					<h4><?php bloginfo( "title" )?></h4>
-				
-					<h3>Adress</h3>
-					<h4>284-10 Yeomchang-dong, Gangseo-gu, Seoul</h4>
-				
-					<h3>Phone Number</h3>
-					<h4>02-9999-9999</h4>
-				
-					<h3>Direction</h3>
-					<h4>Get out of gate 3 and walk straight down for about
-					200 meters. You will see Cool Mat on your left.</h4>
-				</div>
+				<?php the_content(); ?>
 			</div>
 		</div>
+
+		<?php endwhile; endif; ?>
 	</div>
 	</main><!-- #main -->
 

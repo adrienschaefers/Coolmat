@@ -193,11 +193,29 @@ function custom_post_type() {
 		'singular_name'         => _x( 'intro', 'Post Type Singular Name', 'text_domain' ),
 	);
 	$args = array(
-		'label'                 => __( 'Post Type', 'text_domain' ),
-		'taxonomies'            => array( 'category', ),	
+		'labels'                 => $labels,
+		'taxonomies'            => array( 'category'),	
 		'public'                => true,
 	);
 	register_post_type( 'intro', $args );
 
 }
 add_action( 'init', 'custom_post_type', 0 );
+
+
+// Here we add our location custom post type
+function add_locations() {
+
+	$labels = array(
+		'name'                  => _x( 'Locations', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Location', 'Post Type Singular Name', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                 => $labels,
+		'taxonomies'            => array( 'category' ),	
+		'public'                => true,
+	);
+	register_post_type( 'location', $args );
+
+}
+add_action( 'init', 'add_locations', 0 );

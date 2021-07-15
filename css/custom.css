@@ -264,7 +264,8 @@ FOOD GRID LAYOUT
     margin-right: auto;
     max-width: 480px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-content: center;
 }
 
 h3{
