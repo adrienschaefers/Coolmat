@@ -354,6 +354,8 @@ footer{
     }
 
     .logo, .language-select{
+        display: flex;
+        flex-direction: row;
         width: 50px;
     }
 
@@ -417,6 +419,11 @@ footer{
         font-size: 14px;
     }
 
+    .intro {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
     .intro-title{
         font-size: 24px;
     }
@@ -443,7 +450,10 @@ footer{
         grid-row-gap: 50px;
     
         /* L'espace ente les colonnes */
-        grid-column-gap: 20px;
+        grid-column-gap: 20px;  
+        padding-right: 20px;
+        padding-left: 20px;
+    
     }
     
 }

@@ -64,7 +64,10 @@ get_header();
 
 
 
-	<h2 class="food-title container" id="food">Menu</h2>
+	<h2 class="food-title container" id="food">
+		<?php get_category_description('category_name=menu'); ?>
+	</h2>
+
 
 	<div class="grid">
 		<?php
@@ -94,7 +97,9 @@ get_header();
 		?>
 	</div>
 
-	<h2 class="map-title container" id="map">direction to coolmat</h2>
+	<h2 class="map-title container" id="map">
+		<?php get_category_description('post_type=location'); ?>
+	</h2>
 
 
 	<!-- Here we query for our location custom post types -->

@@ -219,3 +219,14 @@ function add_locations() {
 
 }
 add_action( 'init', 'add_locations', 0 );
+
+
+// functions.php
+function get_category_description($query){
+	query_posts($query . '&posts_per_page=1');
+	while (have_posts()){
+		the_post();
+		$category = get_the_category();
+		echo $category[0]->category_description;
+	}
+}
